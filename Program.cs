@@ -12,31 +12,38 @@ int[] loganScores = new int[] { 90, 95, 87, 88, 96 };
 
 //initialize student names array
 
-string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan", "\n" };
-
+string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
 int[] studentScores = new int[10];
 
-int sophiaSum = 0;
 
-decimal sophiaScore;
-
-
-
+Console.WriteLine("Student\t\tGrade\n");
 foreach (string name in studentNames)
 {
     string currentStudent = name;
     if (currentStudent == "Sophia")
-    {
-        foreach (int score in sophiaScores)
-        {
-            sophiaSum += score;
-        }
-        sophiaScore = (decimal)sophiaSum / currentAssignments;
+        studentScores = sophiaScores;
+    else if (currentStudent == "Andrew")
+        studentScores = andrewScores;
+    else if (currentStudent == "Emma")
+        studentScores = andrewScores;
+    else if (currentStudent == "Logan")
+        studentScores = andrewScores;
+    int sumAssignmentScores = 0;
 
-        Console.WriteLine("Student\t\tGrade\n");
-        Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
+    decimal currentStudentGrade;
+
+    {
+        foreach (int score in studentScores)
+        {
+            sumAssignmentScores += score;
+        }
+        currentStudentGrade = (decimal)sumAssignmentScores / currentAssignments;
+
+
+        Console.WriteLine(currentStudent + ":\t\t" + currentStudentGrade + "\tA-");
     }
 }
+
 
 
 Console.WriteLine("Press the Enter key to continue");

@@ -23,11 +23,14 @@ for (int i = 0; i < 10; i++)
 
 string[] names = { "Alex", "Eddie", "David", "Michael" };
 
-for (int i = 0; i < names.Length; i++)
+int x = 15;
+Console.WriteLine(x);
+for (x = 0; x < names.Length; x++)
 {
-    if (names[i] == "David")
+    Console.WriteLine(x);
+    if (names[x] == "David")
     {
-        names[i] = "Sammy";
+        names[x] = "Sammy";
     }
 }
 
@@ -35,3 +38,4 @@ foreach (var name in names)
 {
     Console.WriteLine(name);
 }
+

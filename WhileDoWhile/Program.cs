@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Random random = new Random();
+
+int numberToGuess = 0;
+
+do {
+    numberToGuess = random.Next(10);
+    Console.WriteLine(numberToGuess);
+}
+while (numberToGuess != 7);

@@ -97,13 +97,15 @@
 bool validEntry = false;
 
 do
-{ 
+{
     string? input = Console.ReadLine();
-    if (input >= 5 && input <=10)
+    if (input != null);
     {
-        validEntry = true;
+        if ((int)input >= 5 && input <= 10)
+        {
+            validEntry = true;
+        }
+        else Console.WriteLine($"Wrong input {input}");
     }
-    else Console.WriteLine($"Wrong input {input}");
-
-} while (validEntry == false );
+} while (validEntry == false);
 
